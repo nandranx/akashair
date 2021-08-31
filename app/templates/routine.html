@@ -2,35 +2,41 @@
 
 {% block app_content %}
 
-<div class="container">
+<div class="col-sm-12">
     <div class="row">
-        <div class="col-sm-12" style="background-color:yellowgreen;">
-            <b>  </b>
+        <div class="col-sm-12"  style="background-color:yellowgreen;">
+            {% for each_item in info %}
+                {{ each_item }}
+            {% endfor %}
+            <br/>
         </div>
     </div>
+    <br/>
     <div class="row">
-        <div class="col-sm-12"  style="background-color:pink;">
-            <b>{{ info }}</b> <br/>
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form action="" method="post">
+                <div class="form-outline">
+                    {% for input in form %}
+                    <p>
+                        <div class="form-group">
+                        {% if input.type == "StringField" or input.type == "PasswordField" %}
+                            {{ input.label(class="form-label") }}<br>
+                            {{ input(size=32, class="form-control") }}
+                        {% else %}
+                            {{ input(class="btn btn-primary") }}
+                        {% endif %}
+                        
+                        {% for error in input.errors %}
+                            <span style="color: red;">{{ error }}</span>
+                        {% endfor %}
+                        </div>
+                    </p>
+                    {% endfor %}
+                </div>
+            </form>
         </div>
+        <div class="col-sm-3"></div>
     </div>
 </div>
-
-<div class = "container">
-    <form action="" method="post" >
-    {% for input in form %}
-        <p>
-        {% if input.type == "StringField" or input.type == "PasswordField" %}
-            {{ input.label }}<br>
-            {{ input(size=32) }}
-        {% else %}
-            {{ input }}
-        {% endif %}
-        {% for error in input.errors %}
-            <span style="color: red;">{{ error }}
-        {% endfor %}</span>
-        </p>
-    {% endfor %}
-    </form>
-</div>
-
 {% endblock %}

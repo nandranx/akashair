@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="col-sm-12">
+    <div class="row">
+        <div class="col-sm-12"  style="background-color:yellowgreen;">
+            {% for each_item in info %}
+                {{ each_item }}
+            {% endfor %}
+            <br/>
+        </div>
+    </div>    
+    <br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+                <table class = "table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Routine</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+                    
+                    {% for each_item in routines %}
+                    <tr>
+                        <td class="table-light">
+                            <a href=" {{ url_for('routine', unique_id=each_item['id']) }}">{{ each_item['name'] }}</a>    
+                        </td>
+                        <td>
+                            {{ each_item['description'] }}
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </table>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+{% endblock %}
