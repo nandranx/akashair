@@ -3,36 +3,29 @@
 {% block app_content %}
 
 <div class="col-sm-12">
-    <div class="row">
-        <div class="col-sm-12"  style="background-color:yellowgreen;">
-            {% for each_item in info %}
-                {{ each_item }}
-            {% endfor %}
-            <br/>
-        </div>
-    </div>
+
     <br/>
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <form action="" method="post">
                 <div class="form-outline">
-                    {% for input in form %}
-                    <p>
-                        <div class="form-group">
+                    <div class="form-group">
+                        {% for input in form %}
                         {% if input.type == "StringField" or input.type == "PasswordField" %}
-                            {{ input.label(class="form-label") }}<br>
-                            {{ input(size=32, class="form-control") }}
+                        
+                            {{ input.label(class="form-label") }}
+                                {% for error in input.errors %}
+                                <span class="form-label" style="color: red;">({{ error }}) </span>
+                                {% endfor %}
+                            {{ input(size=32, class="form-control") }}<br/>
+                            
                         {% else %}
                             {{ input(class="btn btn-primary") }}
                         {% endif %}
-                        
-                        {% for error in input.errors %}
-                            <span style="color: red;">{{ error }}</span>
-                        {% endfor %}
-                        </div>
-                    </p>
+            
                     {% endfor %}
+                    </div>
                 </div>
             </form>
         </div>
