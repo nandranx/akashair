@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="col-sm-12">
+
+    <br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <form action="" method="post">
+                <div class="form-outline">
+                    <div class="form-group">
+                        {% for input in form %}
+                        {% if input.type == "StringField" or input.type == "PasswordField" %}
+                        
+                            {{ input.label(class="form-label") }}
+                                {% for error in input.errors %}
+                                <span class="form-label" style="color: red;">({{ error }}) </span>
+                                {% endfor %}
+                            {{ input(size=32, class="form-control") }}<br/>
+                            
+                        {% else %}
+                            {{ input(class="btn btn-primary") }}
+                        {% endif %}
+            
+                    {% endfor %}
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+{% endblock %}
