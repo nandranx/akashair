@@ -44,7 +44,7 @@ def login():
         login_user(user)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('routine')
+            next_page = url_for('routine_home')
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
@@ -74,60 +74,61 @@ def connect() :
         return redirect(url_for('connect'))
     return render_template('connect.html', title='Home',form=form, link_token=create_link_token())
 
-@app.route('/routine/<int:unique_id>', methods = ['GET','POST'])
 @app.route('/routine/<int:unique_id>/', methods = ['GET','POST'])
-@app.route('/routine', defaults={'unique_id': 0},    methods = ['GET','POST'])
-@app.route('/routine/', defaults={'unique_id': 0}, methods = ['GET','POST'])
 @login_required
 def routine(unique_id):
     info = []
+
     form, info = my_view(info, unique_id)
-    
     FieldEntries = []
     FieldEntry = {}
-
-    if unique_id!=0:
-        if form.validate_on_submit():
-            #Add a new Routine to the database
-            #for each_field in form:
-            #    if each_field.type == "StringField" or each_field.type == "PasswordField":
-            #        FieldEntry = {str(each_field.name) : str(each_field.data)}
-            #        FieldEntries.append(FieldEntry)
-            
-            rs = RoutineScreen()
-            rs.version_ = '1'
-            rs.is_primary = True
-
-            rs.reader = '1'
-            rs.editor = '1'
-            rs.entry_reader = '1'
-            rs.entry_editor = '1'
-            
-            rs.name = form.name.data
-            rs.label = form.label.data
-            rs.description = form.description.data
-            rs.fields = form.fields.data
-
-            try:
-                db.session.add(rs)
-                db.session.commit()
-            except Exception as error:
-                info.append(error)
-
-            return redirect(url_for('routine', unique_id=unique_id )), info
-
-        return render_template('routine_entry_editor.html', title='Routine',form=form, unique_id=unique_id, info=info)
-    else:
-        routines = []
-        rs_filtered = RoutineScreen.query.all() 
-        for i in range(0,len(rs_filtered)):
-            avbl_routine = ""
-            avbl_routine = {"name" : str(rs_filtered[i].name),"id" : str(rs_filtered[i].id),"description" : str(rs_filtered[i].description) }
-            routines.append(json.loads(json.dumps(avbl_routine)))
-
-        return render_template('routine_index.html', title='Available Routines', routines=routines)
         
+    if form.validate_on_submit():
+        re = RoutineEntry()
+        re.version_ = '1'
+        re.routine_form_id = unique_id
+        re.routine_form_verion = '1'
+        re.field_values = form.fields.data
 
+        try:
+            db.session.add(re)
+            db.session.commit()
+        except Exception as error:
+            info.append(error)
+
+        return redirect(url_for('routine', unique_id=unique_id )), info
+
+    return render_template('routine_entry/creator.html', title='Routine',form=form, unique_id=unique_id, info=info)        
+
+@app.route('/routine/', methods = ['GET','POST'])
+@login_required
+def routine_redirect():
+    return redirect(url_for('routine_home'))
+
+@app.route('/routine/home/', methods = ['GET','POST'])
+@login_required
+def routine_home():
+    routines = []
+    rs_filtered = RoutineScreen.query.all() 
+    for i in range(0,len(rs_filtered)):
+        avbl_routine = ""
+        avbl_routine = {"name" : str(rs_filtered[i].name),"id" : str(rs_filtered[i].id),"description" : str(rs_filtered[i].description) }
+        routines.append(json.loads(json.dumps(avbl_routine)))
+
+    return render_template('routine/index.html', title='Available Routines', routines=routines)
+        
+@app.route('/routine/<int:unique_id>/view', methods = ['GET','POST'])
+@login_required
+def routine_entry():
+    routines = []
+    rs_filtered = RoutineScreen.query.all() 
+    for i in range(0,len(rs_filtered)):
+        avbl_routine = ""
+        avbl_routine = {"name" : str(rs_filtered[i].name),"id" : str(rs_filtered[i].id),"description" : str(rs_filtered[i].description) }
+        routines.append(json.loads(json.dumps(avbl_routine)))
+
+    return render_template('routine_entry/index.html', title='Available Routines', routines=routines)
+        
 
 @app.errorhandler(404)
 def not_found(e):

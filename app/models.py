@@ -31,46 +31,28 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password_hash, password)    
 
 class RoutineScreen(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    version = db.Column(db.Integer)
-    is_primary = db.Column(db.Boolean)
-
-    reader = db.Column(db.Integer, db.ForeignKey('user.id'))
-    editor = db.Column(db.Integer, db.ForeignKey('user.id'))
-    entry_reader = db.Column(db.Integer, db.ForeignKey('user.id'))
-    entry_editor = db.Column(db.Integer, db.ForeignKey('user.id'))
+    id = db.Column(db.Integer, primary_key=True, default = uuid.uuid4)
 
     name = db.Column(db.String(30))
     description = db.Column(db.String(150))
     fields =  db.Column(db.Text)
 
     created_at = db.Column(db.DateTime,default=datetime.utcnow)
-    created_by = db.Column(db.Integer, db.ForeignKey('user.id'),default=1)
     last_updated = db.Column(db.DateTime, default=datetime.utcnow)
-    last_updated_by = db.Column(db.Integer, db.ForeignKey('user.id'),default=1)
-    deleted_at = db.Column(db.DateTime)
 
     def __repr__(self):
         return '<RoutineScreen {}>'.format(self.name)
 
 class RoutineEntry(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    version = db.Column(db.Integer)
-    is_primary = db.Column(db.Boolean)
-    
+    id = db.Column(db.Integer, primary_key=True, default = uuid.uuid4)    
     routine_form_id = db.Column(db.Integer)
-    routine_form_verion = db.Column(db.Integer)
-
-    reader = db.Column(db.Integer, db.ForeignKey('user.id'))
-    editor = db.Column(db.Integer, db.ForeignKey('user.id'))
 
     field_values = db.Column(db.Text)
-
+    
     created_at = db.Column(db.DateTime,default=datetime.utcnow)
-    created_by = db.Column(db.Integer,db.ForeignKey('user.id'),default=1)
     last_updated = db.Column(db.DateTime, default=datetime.utcnow)
-    last_updated_by = db.Column(db.Integer,db.ForeignKey('user.id'),default=1)
-    deleted_at = db.Column(db.DateTime)
+    #last_updated_by = db.Column(db.Integer,db.ForeignKey('user.id'),default=1)
+    #deleted_at = db.Column(db.DateTime)
 
     def __repr__(self):
-        return '<RoutineEntry {}>'.format(self.id)
+        return '<RoutineEntry {}>'.format(self.field_values)

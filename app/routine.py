@@ -7,6 +7,7 @@ import datetime
 import plaid
 import json
 import time
+import uuid
 from app import app
 from app import db
 from app.models import User, RoutineScreen, RoutineEntry
