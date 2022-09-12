@@ -1,12 +1,121 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <response xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="1.2" xsi:noNamespaceSchemaLocation="http://www.aviationweather.gov/static/adds/schema/metar1_2.xsd">
-  <request_index>502850614</request_index>
+  <request_index>502857326</request_index>
   <data_source name="metars" />
   <request type="retrieve" />
   <errors />
   <warnings />
-  <time_taken_ms>353</time_taken_ms>
-  <data num_results="4702">
+  <time_taken_ms>341</time_taken_ms>
+  <data num_results="4699">
+    <METAR>
+      <raw_text>SCAT 120228Z AUTO VRB02KT 9999 BKN014/// 10/07 Q1020</raw_text>
+      <station_id>SCAT</station_id>
+      <observation_time>2022-09-12T02:28:00Z</observation_time>
+      <latitude>-27.27</latitude>
+      <longitude>-70.77</longitude>
+      <temp_c>10.0</temp_c>
+      <dewpoint_c>7.0</dewpoint_c>
+      <wind_dir_degrees>0</wind_dir_degrees>
+      <wind_speed_kt>2</wind_speed_kt>
+      <visibility_statute_mi>6.21</visibility_statute_mi>
+      <altim_in_hg>30.11811</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+      </quality_control_flags>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="1400" />
+      <flight_category>MVFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>209.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>CYYN 120228Z AUTO 21012KT 5SM HZ CLR 17/M03 A2988 RMK SLP118 DENSITY ALT 3600FT</raw_text>
+      <station_id>CYYN</station_id>
+      <observation_time>2022-09-12T02:28:00Z</observation_time>
+      <latitude>50.28</latitude>
+      <longitude>-107.68</longitude>
+      <temp_c>17.0</temp_c>
+      <dewpoint_c>-3.0</dewpoint_c>
+      <wind_dir_degrees>210</wind_dir_degrees>
+      <wind_speed_kt>12</wind_speed_kt>
+      <visibility_statute_mi>5.0</visibility_statute_mi>
+      <altim_in_hg>29.878937</altim_in_hg>
+      <sea_level_pressure_mb>1011.8</sea_level_pressure_mb>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+      </quality_control_flags>
+      <wx_string>HZ</wx_string>
+      <sky_condition sky_cover="CLR" />
+      <flight_category>MVFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>814.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>PATG 120227Z AUTO 15020KT 4SM BR OVC004 11/11 A2960 RMK AO2 CIG 004V007</raw_text>
+      <station_id>PATG</station_id>
+      <observation_time>2022-09-12T02:27:00Z</observation_time>
+      <latitude>59.05</latitude>
+      <longitude>-160.38</longitude>
+      <temp_c>11.0</temp_c>
+      <dewpoint_c>11.0</dewpoint_c>
+      <wind_dir_degrees>150</wind_dir_degrees>
+      <wind_speed_kt>20</wind_speed_kt>
+      <visibility_statute_mi>4.0</visibility_statute_mi>
+      <altim_in_hg>29.601377</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <wx_string>BR</wx_string>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="400" />
+      <flight_category>LIFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>1.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>PASA 120227Z AUTO 09009KT 10SM BKN006 OVC050 09/09 A2940 RMK AO2</raw_text>
+      <station_id>PASA</station_id>
+      <observation_time>2022-09-12T02:27:00Z</observation_time>
+      <latitude>63.68</latitude>
+      <longitude>-170.5</longitude>
+      <temp_c>9.0</temp_c>
+      <dewpoint_c>9.0</dewpoint_c>
+      <wind_dir_degrees>90</wind_dir_degrees>
+      <wind_speed_kt>9</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>29.40059</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="600" />
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="5000" />
+      <flight_category>IFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>9.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>PAKF 120227Z AUTO 19015G20KT 10SM FEW019 BKN060 11/07 A2958 RMK AO2</raw_text>
+      <station_id>PAKF</station_id>
+      <observation_time>2022-09-12T02:27:00Z</observation_time>
+      <latitude>54.85</latitude>
+      <longitude>-163.42</longitude>
+      <temp_c>11.0</temp_c>
+      <dewpoint_c>7.0</dewpoint_c>
+      <wind_dir_degrees>190</wind_dir_degrees>
+      <wind_speed_kt>15</wind_speed_kt>
+      <wind_gust_kt>20</wind_gust_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>29.58071</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="FEW" cloud_base_ft_agl="1900" />
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="6000" />
+      <flight_category>VFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>2.0</elevation_m>
+    </METAR>
     <METAR>
       <raw_text>CYVO 120227Z AUTO 35004KT 9SM BKN008 15/15 A3000 RMK SLP169 DENSITY ALT 1300FT</raw_text>
       <station_id>CYVO</station_id>
@@ -52,6 +161,54 @@
       <elevation_m>185.0</elevation_m>
     </METAR>
     <METAR>
+      <raw_text>KUGN 120226Z AUTO 31012G24KT -RA BKN011 OVC047 14/ A2981 RMK AO2 P0005 T0144 $</raw_text>
+      <station_id>KUGN</station_id>
+      <observation_time>2022-09-12T02:26:00Z</observation_time>
+      <latitude>42.42</latitude>
+      <longitude>-87.87</longitude>
+      <temp_c>14.4</temp_c>
+      <wind_dir_degrees>310</wind_dir_degrees>
+      <wind_speed_kt>12</wind_speed_kt>
+      <wind_gust_kt>24</wind_gust_kt>
+      <altim_in_hg>29.811024</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+        <maintenance_indicator_on>TRUE</maintenance_indicator_on>
+      </quality_control_flags>
+      <wx_string>-RA</wx_string>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="1100" />
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="4700" />
+      <precip_in>0.05</precip_in>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>217.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>KLEX 120226Z AUTO 21004KT 9SM -RA SCT007 BKN055 BKN080 21/19 A2996 RMK AO2 P0001 T02060189</raw_text>
+      <station_id>KLEX</station_id>
+      <observation_time>2022-09-12T02:26:00Z</observation_time>
+      <latitude>38.03</latitude>
+      <longitude>-84.6</longitude>
+      <temp_c>20.6</temp_c>
+      <dewpoint_c>18.9</dewpoint_c>
+      <wind_dir_degrees>210</wind_dir_degrees>
+      <wind_speed_kt>4</wind_speed_kt>
+      <visibility_statute_mi>9.0</visibility_statute_mi>
+      <altim_in_hg>29.958662</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <wx_string>-RA</wx_string>
+      <sky_condition sky_cover="SCT" cloud_base_ft_agl="700" />
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="5500" />
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="8000" />
+      <flight_category>VFR</flight_category>
+      <precip_in>0.01</precip_in>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>294.0</elevation_m>
+    </METAR>
+    <METAR>
       <raw_text>KITH 120226Z AUTO 12005KT SCT009 OVC018 18/18 A2999 RMK AO2 PWINO RVRNO $</raw_text>
       <station_id>KITH</station_id>
       <observation_time>2022-09-12T02:26:00Z</observation_time>
@@ -74,6 +231,74 @@
       <elevation_m>338.0</elevation_m>
     </METAR>
     <METAR>
+      <raw_text>KELZ 120226Z AUTO 15004KT 1 3/4SM BR OVC002 18/17 A3000 RMK AO2 T01830167 TSNO</raw_text>
+      <station_id>KELZ</station_id>
+      <observation_time>2022-09-12T02:26:00Z</observation_time>
+      <latitude>42.1</latitude>
+      <longitude>-77.98</longitude>
+      <temp_c>18.3</temp_c>
+      <dewpoint_c>16.7</dewpoint_c>
+      <wind_dir_degrees>150</wind_dir_degrees>
+      <wind_speed_kt>4</wind_speed_kt>
+      <visibility_statute_mi>1.75</visibility_statute_mi>
+      <altim_in_hg>30.0</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+        <lightning_sensor_off>TRUE</lightning_sensor_off>
+      </quality_control_flags>
+      <wx_string>BR</wx_string>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="200" />
+      <flight_category>LIFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>639.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>KDCA 120226Z 20006KT 10SM BKN010 BKN039 BKN065 BKN250 24/23 A2995 RMK AO2 T02440228</raw_text>
+      <station_id>KDCA</station_id>
+      <observation_time>2022-09-12T02:26:00Z</observation_time>
+      <latitude>38.85</latitude>
+      <longitude>-77.03</longitude>
+      <temp_c>24.4</temp_c>
+      <dewpoint_c>22.8</dewpoint_c>
+      <wind_dir_degrees>200</wind_dir_degrees>
+      <wind_speed_kt>6</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>29.949802</altim_in_hg>
+      <quality_control_flags>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="1000" />
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="3900" />
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="6500" />
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="25000" />
+      <flight_category>MVFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>4.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>KCXY 120226Z AUTO 03003KT 1 1/2SM BR OVC003 21/19 A2997 RMK AO2 T02110189</raw_text>
+      <station_id>KCXY</station_id>
+      <observation_time>2022-09-12T02:26:00Z</observation_time>
+      <latitude>40.22</latitude>
+      <longitude>-76.85</longitude>
+      <temp_c>21.1</temp_c>
+      <dewpoint_c>18.9</dewpoint_c>
+      <wind_dir_degrees>30</wind_dir_degrees>
+      <wind_speed_kt>3</wind_speed_kt>
+      <visibility_statute_mi>1.5</visibility_statute_mi>
+      <altim_in_hg>29.970472</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <wx_string>BR</wx_string>
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="300" />
+      <flight_category>LIFR</flight_category>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>102.0</elevation_m>
+    </METAR>
+    <METAR>
       <raw_text>OPLA 120225Z 06006KT 3000 BR NSC 25/22 Q1005 NOSIG RMK QFE980 A29.70</raw_text>
       <station_id>OPLA</station_id>
       <observation_time>2022-09-12T02:25:00Z</observation_time>
@@ -91,8 +316,30 @@
       <wx_string>BR</wx_string>
       <sky_condition sky_cover="CLR" />
       <flight_category>IFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>217.0</elevation_m>
+    </METAR>
+    <METAR>
+      <raw_text>OPKC 120225Z 30004KT 5000 FU SCT020 SCT100 28/25 Q1001 NOSIG</raw_text>
+      <station_id>OPKC</station_id>
+      <observation_time>2022-09-12T02:25:00Z</observation_time>
+      <latitude>24.9</latitude>
+      <longitude>67.13</longitude>
+      <temp_c>28.0</temp_c>
+      <dewpoint_c>25.0</dewpoint_c>
+      <wind_dir_degrees>300</wind_dir_degrees>
+      <wind_speed_kt>4</wind_speed_kt>
+      <visibility_statute_mi>3.11</visibility_statute_mi>
+      <altim_in_hg>29.557087</altim_in_hg>
+      <quality_control_flags>
+        <no_signal>TRUE</no_signal>
+      </quality_control_flags>
+      <wx_string>FU</wx_string>
+      <sky_condition sky_cover="SCT" cloud_base_ft_agl="2000" />
+      <sky_condition sky_cover="SCT" cloud_base_ft_agl="10000" />
+      <flight_category>MVFR</flight_category>
+      <metar_type>METAR</metar_type>
+      <elevation_m>20.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KROS 120225Z AUTO 00000KT 10SM BKN120 12/10 A3008 RMK AO2</raw_text>
@@ -112,7 +359,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="BKN" cloud_base_ft_agl="12000" />
       <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>282.0</elevation_m>
     </METAR>
     <METAR>
@@ -411,7 +658,7 @@
       <wx_string>FG</wx_string>
       <sky_condition sky_cover="CLR" />
       <flight_category>LIFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>2.0</elevation_m>
     </METAR>
     <METAR>
@@ -1828,7 +2075,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>11.0</elevation_m>
     </METAR>
     <METAR>
@@ -3158,7 +3405,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>18.0</elevation_m>
     </METAR>
     <METAR>
@@ -3208,7 +3455,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>366.0</elevation_m>
     </METAR>
     <METAR>
@@ -3243,7 +3490,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>477.0</elevation_m>
     </METAR>
     <METAR>
@@ -3276,7 +3523,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>5.0</elevation_m>
     </METAR>
     <METAR>
@@ -3294,7 +3541,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>22.0</elevation_m>
     </METAR>
     <METAR>
@@ -3329,7 +3576,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>40.0</elevation_m>
     </METAR>
     <METAR>
@@ -3347,7 +3594,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>6.0</elevation_m>
     </METAR>
     <METAR>
@@ -3383,7 +3630,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>71.0</elevation_m>
     </METAR>
     <METAR>
@@ -3416,7 +3663,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>536.0</elevation_m>
     </METAR>
     <METAR>
@@ -3434,7 +3681,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>171.0</elevation_m>
     </METAR>
     <METAR>
@@ -3470,7 +3717,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>69.0</elevation_m>
     </METAR>
     <METAR>
@@ -3488,7 +3735,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>738.0</elevation_m>
     </METAR>
     <METAR>
@@ -3506,7 +3753,7 @@
       <quality_control_flags>
         <auto>TRUE</auto>
       </quality_control_flags>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>33.0</elevation_m>
     </METAR>
     <METAR>
@@ -5874,7 +6121,7 @@
       <sky_condition sky_cover="BKN" cloud_base_ft_agl="6500" />
       <sky_condition sky_cover="BKN" cloud_base_ft_agl="18000" />
       <flight_category>MVFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>83.0</elevation_m>
     </METAR>
     <METAR>
@@ -8302,6 +8549,29 @@
       <elevation_m>303.0</elevation_m>
     </METAR>
     <METAR>
+      <raw_text>KHWV 120218Z AUTO 00000KT 10SM BKN024 OVC033 20/18 A3001 RMK AO2 RAE04 P0000 T02000178</raw_text>
+      <station_id>KHWV</station_id>
+      <observation_time>2022-09-12T02:18:00Z</observation_time>
+      <latitude>40.82</latitude>
+      <longitude>-72.87</longitude>
+      <temp_c>20.0</temp_c>
+      <dewpoint_c>17.8</dewpoint_c>
+      <wind_dir_degrees>0</wind_dir_degrees>
+      <wind_speed_kt>0</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>30.008858</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="2400" />
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="3300" />
+      <flight_category>MVFR</flight_category>
+      <precip_in>0.005</precip_in>
+      <metar_type>SPECI</metar_type>
+      <elevation_m>20.0</elevation_m>
+    </METAR>
+    <METAR>
       <raw_text>KEDW 120218Z AUTO 23010KT 10SM -RA FEW055 OVC080 23/18 A3002 RMK AO2 RAB00E14RAB18 SLP148</raw_text>
       <station_id>KEDW</station_id>
       <observation_time>2022-09-12T02:18:00Z</observation_time>
@@ -8439,7 +8709,7 @@
       <sky_condition sky_cover="BKN" cloud_base_ft_agl="6500" />
       <sky_condition sky_cover="OVC" cloud_base_ft_agl="10000" />
       <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
+      <metar_type>METAR</metar_type>
       <elevation_m>1800.0</elevation_m>
     </METAR>
     <METAR>
@@ -8577,7 +8847,7 @@
       <sky_condition sky_cover="OVC" cloud_base_ft_agl="700" />
       <flight_category>LIFR</flight_category>
       <precip_in>0.01</precip_in>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>266.0</elevation_m>
     </METAR>
     <METAR>
@@ -8920,28 +9190,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>SPECI</metar_type>
       <elevation_m>25.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>PATG 120215Z AUTO 15020KT 2 1/2SM BR OVC004 11/11 A2960 RMK AO2</raw_text>
-      <station_id>PATG</station_id>
-      <observation_time>2022-09-12T02:15:00Z</observation_time>
-      <latitude>59.05</latitude>
-      <longitude>-160.38</longitude>
-      <temp_c>11.0</temp_c>
-      <dewpoint_c>11.0</dewpoint_c>
-      <wind_dir_degrees>150</wind_dir_degrees>
-      <wind_speed_kt>20</wind_speed_kt>
-      <visibility_statute_mi>2.5</visibility_statute_mi>
-      <altim_in_hg>29.601377</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <wx_string>BR</wx_string>
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="400" />
-      <flight_category>LIFR</flight_category>
-      <metar_type>SPECI</metar_type>
-      <elevation_m>1.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>PAKX 120215Z AUTO 00000KT 10SM SCT036 SCT050 OVC070 11/08 A2978 RMK AO2</raw_text>
@@ -9474,25 +9722,6 @@
       <flight_category>MVFR</flight_category>
       <metar_type>SPECI</metar_type>
       <elevation_m>120.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KW63 120215Z AUTO 00000KT 10SM SCT045 A2998 RMK AO1</raw_text>
-      <station_id>KW63</station_id>
-      <observation_time>2022-09-12T02:15:00Z</observation_time>
-      <latitude>36.6</latitude>
-      <longitude>-78.55</longitude>
-      <wind_dir_degrees>0</wind_dir_degrees>
-      <wind_speed_kt>0</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>29.97933</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="4500" />
-      <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>126.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KW43 120215Z AUTO 14007KT 10SM CLR 15/07 A3014 RMK AO2</raw_text>
@@ -15432,6 +15661,28 @@
       <elevation_m>291.0</elevation_m>
     </METAR>
     <METAR>
+      <raw_text>KOCW 120215Z AUTO 00000KT 10SM BKN007 OVC015 25/24 A3000 RMK AO2 T02500238</raw_text>
+      <station_id>KOCW</station_id>
+      <observation_time>2022-09-12T02:15:00Z</observation_time>
+      <latitude>35.57</latitude>
+      <longitude>-77.05</longitude>
+      <temp_c>25.0</temp_c>
+      <dewpoint_c>23.8</dewpoint_c>
+      <wind_dir_degrees>0</wind_dir_degrees>
+      <wind_speed_kt>0</wind_speed_kt>
+      <visibility_statute_mi>10.0</visibility_statute_mi>
+      <altim_in_hg>30.0</altim_in_hg>
+      <quality_control_flags>
+        <auto>TRUE</auto>
+        <auto_station>TRUE</auto_station>
+      </quality_control_flags>
+      <sky_condition sky_cover="BKN" cloud_base_ft_agl="700" />
+      <sky_condition sky_cover="OVC" cloud_base_ft_agl="1500" />
+      <flight_category>IFR</flight_category>
+      <metar_type>METAR</metar_type>
+      <elevation_m>10.0</elevation_m>
+    </METAR>
+    <METAR>
       <raw_text>KOBE 120215Z AUTO 00000KT 10SM CLR 23/23 A3006 RMK AO2</raw_text>
       <station_id>KOBE</station_id>
       <observation_time>2022-09-12T02:15:00Z</observation_time>
@@ -16866,7 +17117,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="CLR" />
       <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>356.0</elevation_m>
     </METAR>
     <METAR>
@@ -19632,7 +19883,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="OVC" cloud_base_ft_agl="2100" />
       <flight_category>MVFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>10.0</elevation_m>
     </METAR>
     <METAR>
@@ -22006,7 +22257,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="BKN" cloud_base_ft_agl="500" />
       <flight_category>IFR</flight_category>
-      <metar_type>METAR</metar_type>
+      <metar_type>SPECI</metar_type>
       <elevation_m>279.0</elevation_m>
     </METAR>
     <METAR>
@@ -22327,29 +22578,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>SPECI</metar_type>
       <elevation_m>317.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KEZS 120215Z AUTO 34008KT 10SM RA BKN090 OVC110 15/13 A2995 RMK AO2 T01520133</raw_text>
-      <station_id>KEZS</station_id>
-      <observation_time>2022-09-12T02:15:00Z</observation_time>
-      <latitude>44.78</latitude>
-      <longitude>-88.57</longitude>
-      <temp_c>15.2</temp_c>
-      <dewpoint_c>13.3</dewpoint_c>
-      <wind_dir_degrees>340</wind_dir_degrees>
-      <wind_speed_kt>8</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>29.949802</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <wx_string>RA</wx_string>
-      <sky_condition sky_cover="BKN" cloud_base_ft_agl="9000" />
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="11000" />
-      <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
-      <elevation_m>247.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KEZP 120215Z AUTO 36006KT 10SM CLR 28/22 A3003 RMK A01</raw_text>
@@ -27207,30 +27435,6 @@
       <elevation_m>788.0</elevation_m>
     </METAR>
     <METAR>
-      <raw_text>KANQ 120215Z AUTO 25010G16KT 10SM FEW014 BKN019 OVC044 18/17 A2985 RMK AO2</raw_text>
-      <station_id>KANQ</station_id>
-      <observation_time>2022-09-12T02:15:00Z</observation_time>
-      <latitude>41.63</latitude>
-      <longitude>-85.08</longitude>
-      <temp_c>18.0</temp_c>
-      <dewpoint_c>17.0</dewpoint_c>
-      <wind_dir_degrees>250</wind_dir_degrees>
-      <wind_speed_kt>10</wind_speed_kt>
-      <wind_gust_kt>16</wind_gust_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>29.84941</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <sky_condition sky_cover="FEW" cloud_base_ft_agl="1400" />
-      <sky_condition sky_cover="BKN" cloud_base_ft_agl="1900" />
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="4400" />
-      <flight_category>MVFR</flight_category>
-      <metar_type>SPECI</metar_type>
-      <elevation_m>299.0</elevation_m>
-    </METAR>
-    <METAR>
       <raw_text>KAMN 120215Z AUTO 11009KT 7SM SCT011 BKN026 OVC046 21/20 A2982 RMK AO2 T02100197</raw_text>
       <station_id>KAMN</station_id>
       <observation_time>2022-09-12T02:15:00Z</observation_time>
@@ -30499,7 +30703,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="CLR" />
       <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
+      <metar_type>METAR</metar_type>
       <elevation_m>3629.0</elevation_m>
     </METAR>
     <METAR>
@@ -30607,28 +30811,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>SPECI</metar_type>
       <elevation_m>2205.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KCXY 120214Z AUTO 00000KT 2 1/2SM BR OVC003 21/19 A2997 RMK AO2 T02060189</raw_text>
-      <station_id>KCXY</station_id>
-      <observation_time>2022-09-12T02:14:00Z</observation_time>
-      <latitude>40.22</latitude>
-      <longitude>-76.85</longitude>
-      <temp_c>20.6</temp_c>
-      <dewpoint_c>18.9</dewpoint_c>
-      <wind_dir_degrees>0</wind_dir_degrees>
-      <wind_speed_kt>0</wind_speed_kt>
-      <visibility_statute_mi>2.5</visibility_statute_mi>
-      <altim_in_hg>29.970472</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <wx_string>BR</wx_string>
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="300" />
-      <flight_category>LIFR</flight_category>
-      <metar_type>SPECI</metar_type>
-      <elevation_m>102.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KCVB 120214Z AUTO 36004KT 10SM SCT095 29/14 A3010 RMK AO2</raw_text>
@@ -31934,7 +32116,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="CLR" />
       <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
+      <metar_type>METAR</metar_type>
       <elevation_m>1974.0</elevation_m>
     </METAR>
     <METAR>
@@ -32023,7 +32205,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="BKN" cloud_base_ft_agl="6500" />
       <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
+      <metar_type>METAR</metar_type>
       <elevation_m>176.0</elevation_m>
     </METAR>
     <METAR>
@@ -32109,7 +32291,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="CLR" />
       <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
+      <metar_type>METAR</metar_type>
       <elevation_m>1289.0</elevation_m>
     </METAR>
     <METAR>
@@ -32889,30 +33071,6 @@
       <flight_category>MVFR</flight_category>
       <metar_type>SPECI</metar_type>
       <elevation_m>106.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KUGN 120205Z AUTO 33011G25KT -RA SCT011 SCT018 OVC050 14/ A2981 RMK AO2 P0003 T0144 $</raw_text>
-      <station_id>KUGN</station_id>
-      <observation_time>2022-09-12T02:05:00Z</observation_time>
-      <latitude>42.42</latitude>
-      <longitude>-87.87</longitude>
-      <temp_c>14.4</temp_c>
-      <wind_dir_degrees>330</wind_dir_degrees>
-      <wind_speed_kt>11</wind_speed_kt>
-      <wind_gust_kt>25</wind_gust_kt>
-      <altim_in_hg>29.811024</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-        <maintenance_indicator_on>TRUE</maintenance_indicator_on>
-      </quality_control_flags>
-      <wx_string>-RA</wx_string>
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="1100" />
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="1800" />
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="5000" />
-      <precip_in>0.03</precip_in>
-      <metar_type>METAR</metar_type>
-      <elevation_m>217.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KSBM 120205Z AUTO 35017G29KT 2SM +RA FEW009 BKN013 OVC025 15/ A2984 RMK AO2 PK WND 34029/0203 P0005 T0150 $</raw_text>
@@ -42984,26 +43142,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>METAR</metar_type>
       <elevation_m>516.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>SCAT 120200Z AUTO VRB02KT 9999 NCD 10/07 Q1020</raw_text>
-      <station_id>SCAT</station_id>
-      <observation_time>2022-09-12T02:00:00Z</observation_time>
-      <latitude>-27.27</latitude>
-      <longitude>-70.77</longitude>
-      <temp_c>10.0</temp_c>
-      <dewpoint_c>7.0</dewpoint_c>
-      <wind_dir_degrees>0</wind_dir_degrees>
-      <wind_speed_kt>2</wind_speed_kt>
-      <visibility_statute_mi>6.21</visibility_statute_mi>
-      <altim_in_hg>30.11811</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-      </quality_control_flags>
-      <sky_condition sky_cover="CLR" />
-      <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>209.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>SCAR 120200Z 18009KT 9999 OVC028 16/12 Q1020</raw_text>
@@ -57304,27 +57442,6 @@
       <elevation_m>20.0</elevation_m>
     </METAR>
     <METAR>
-      <raw_text>CYYN 120200Z AUTO 21010KT 9SM CLR 19/M02 A2988 RMK SLP119 DENSITY ALT 3900FT</raw_text>
-      <station_id>CYYN</station_id>
-      <observation_time>2022-09-12T02:00:00Z</observation_time>
-      <latitude>50.28</latitude>
-      <longitude>-107.68</longitude>
-      <temp_c>19.0</temp_c>
-      <dewpoint_c>-2.0</dewpoint_c>
-      <wind_dir_degrees>210</wind_dir_degrees>
-      <wind_speed_kt>10</wind_speed_kt>
-      <visibility_statute_mi>9.0</visibility_statute_mi>
-      <altim_in_hg>29.878937</altim_in_hg>
-      <sea_level_pressure_mb>1011.9</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-      </quality_control_flags>
-      <sky_condition sky_cover="CLR" />
-      <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>814.0</elevation_m>
-    </METAR>
-    <METAR>
       <raw_text>CYYL 120200Z AUTO 28005KT 9SM BKN170 13/05 A2982 RMK SLP111 DENSITY ALT 1300FT</raw_text>
       <station_id>CYYL</station_id>
       <observation_time>2022-09-12T02:00:00Z</observation_time>
@@ -66689,29 +66806,6 @@
       <elevation_m>3.0</elevation_m>
     </METAR>
     <METAR>
-      <raw_text>PASA 120156Z AUTO 08010KT 10SM SCT006 OVC050 09/09 A2940 RMK AO2 SLP957 T00940089</raw_text>
-      <station_id>PASA</station_id>
-      <observation_time>2022-09-12T01:56:00Z</observation_time>
-      <latitude>63.68</latitude>
-      <longitude>-170.5</longitude>
-      <temp_c>9.4</temp_c>
-      <dewpoint_c>8.9</dewpoint_c>
-      <wind_dir_degrees>80</wind_dir_degrees>
-      <wind_speed_kt>10</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>29.40059</altim_in_hg>
-      <sea_level_pressure_mb>995.7</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="600" />
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="5000" />
-      <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>9.0</elevation_m>
-    </METAR>
-    <METAR>
       <raw_text>PARS 120156Z AUTO 13008KT 10SM -RA SCT017 OVC038 11/11 A2955 RMK AO2 SLP009 T01110106 PNO $</raw_text>
       <station_id>PARS</station_id>
       <observation_time>2022-09-12T01:56:00Z</observation_time>
@@ -67185,30 +67279,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>METAR</metar_type>
       <elevation_m>4.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>PAKF 120156Z AUTO 20014G19KT 7SM OVC017 11/08 A2960 RMK AO2 PK WND 19027/0110 SLP024 T01060078 $</raw_text>
-      <station_id>PAKF</station_id>
-      <observation_time>2022-09-12T01:56:00Z</observation_time>
-      <latitude>54.85</latitude>
-      <longitude>-163.42</longitude>
-      <temp_c>10.6</temp_c>
-      <dewpoint_c>7.8</dewpoint_c>
-      <wind_dir_degrees>200</wind_dir_degrees>
-      <wind_speed_kt>14</wind_speed_kt>
-      <wind_gust_kt>19</wind_gust_kt>
-      <visibility_statute_mi>7.0</visibility_statute_mi>
-      <altim_in_hg>29.601377</altim_in_hg>
-      <sea_level_pressure_mb>1002.4</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-        <maintenance_indicator_on>TRUE</maintenance_indicator_on>
-      </quality_control_flags>
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="1700" />
-      <flight_category>MVFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>2.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>PAIW 120156Z AUTO 08012G16KT 10SM OVC050 11/08 A2950 RMK AO2 SLP993 T01060078 PNO $</raw_text>
@@ -70194,31 +70264,6 @@
       <elevation_m>11.0</elevation_m>
     </METAR>
     <METAR>
-      <raw_text>KHWV 120156Z AUTO 00000KT 10SM -RA FEW026 OVC035 20/18 A3002 RMK AO2 RAE10B54 SLP164 P0000 T02000178</raw_text>
-      <station_id>KHWV</station_id>
-      <observation_time>2022-09-12T01:56:00Z</observation_time>
-      <latitude>40.82</latitude>
-      <longitude>-72.87</longitude>
-      <temp_c>20.0</temp_c>
-      <dewpoint_c>17.8</dewpoint_c>
-      <wind_dir_degrees>0</wind_dir_degrees>
-      <wind_speed_kt>0</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>30.02067</altim_in_hg>
-      <sea_level_pressure_mb>1016.4</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <wx_string>-RA</wx_string>
-      <sky_condition sky_cover="FEW" cloud_base_ft_agl="2600" />
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="3500" />
-      <flight_category>VFR</flight_category>
-      <precip_in>0.005</precip_in>
-      <metar_type>SPECI</metar_type>
-      <elevation_m>20.0</elevation_m>
-    </METAR>
-    <METAR>
       <raw_text>KHND 120156Z 36007KT 10SM CLR 33/10 A2999 RMK AO2 SLP146 T03280100</raw_text>
       <station_id>KHND</station_id>
       <observation_time>2022-09-12T01:56:00Z</observation_time>
@@ -71013,30 +71058,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>METAR</metar_type>
       <elevation_m>1291.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KELZ 120156Z AUTO 14005KT 5SM BR OVC003 18/17 A3001 RMK AO2 SLP153 T01830167 TSNO</raw_text>
-      <station_id>KELZ</station_id>
-      <observation_time>2022-09-12T01:56:00Z</observation_time>
-      <latitude>42.1</latitude>
-      <longitude>-77.98</longitude>
-      <temp_c>18.3</temp_c>
-      <dewpoint_c>16.7</dewpoint_c>
-      <wind_dir_degrees>140</wind_dir_degrees>
-      <wind_speed_kt>5</wind_speed_kt>
-      <visibility_statute_mi>5.0</visibility_statute_mi>
-      <altim_in_hg>30.008858</altim_in_hg>
-      <sea_level_pressure_mb>1015.3</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-        <lightning_sensor_off>TRUE</lightning_sensor_off>
-      </quality_control_flags>
-      <wx_string>BR</wx_string>
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="300" />
-      <flight_category>LIFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>639.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KEKY 120156Z AUTO 00000KT 10SM CLR 22/22 A3002 RMK AO2 SLP013 P0001 T02170217</raw_text>
@@ -73036,28 +73057,6 @@
       <elevation_m>54.0</elevation_m>
     </METAR>
     <METAR>
-      <raw_text>OPKC 120155Z 29009KT 5000 FU SCT020 SCT100 28/25 Q1001 NOSIG</raw_text>
-      <station_id>OPKC</station_id>
-      <observation_time>2022-09-12T01:55:00Z</observation_time>
-      <latitude>24.9</latitude>
-      <longitude>67.13</longitude>
-      <temp_c>28.0</temp_c>
-      <dewpoint_c>25.0</dewpoint_c>
-      <wind_dir_degrees>290</wind_dir_degrees>
-      <wind_speed_kt>9</wind_speed_kt>
-      <visibility_statute_mi>3.11</visibility_statute_mi>
-      <altim_in_hg>29.557087</altim_in_hg>
-      <quality_control_flags>
-        <no_signal>TRUE</no_signal>
-      </quality_control_flags>
-      <wx_string>FU</wx_string>
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="2000" />
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="10000" />
-      <flight_category>MVFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>20.0</elevation_m>
-    </METAR>
-    <METAR>
       <raw_text>OPFA 120155Z 36004KT 5000 FU NSC 25/21 Q1005 NOSIG</raw_text>
       <station_id>OPFA</station_id>
       <observation_time>2022-09-12T01:55:00Z</observation_time>
@@ -73763,7 +73762,7 @@
       </quality_control_flags>
       <sky_condition sky_cover="CLR" />
       <flight_category>VFR</flight_category>
-      <metar_type>SPECI</metar_type>
+      <metar_type>METAR</metar_type>
       <elevation_m>5.0</elevation_m>
     </METAR>
     <METAR>
@@ -74409,27 +74408,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>METAR</metar_type>
       <elevation_m>308.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KOCW 120155Z AUTO 00000KT 10SM BKN007 25/24 A3000 RMK AO2 T02480237</raw_text>
-      <station_id>KOCW</station_id>
-      <observation_time>2022-09-12T01:55:00Z</observation_time>
-      <latitude>35.57</latitude>
-      <longitude>-77.05</longitude>
-      <temp_c>24.8</temp_c>
-      <dewpoint_c>23.7</dewpoint_c>
-      <wind_dir_degrees>0</wind_dir_degrees>
-      <wind_speed_kt>0</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>30.0</altim_in_hg>
-      <quality_control_flags>
-        <auto>TRUE</auto>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <sky_condition sky_cover="BKN" cloud_base_ft_agl="700" />
-      <flight_category>IFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>10.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KNTD 120155Z 26006KT 10SM FEW075 FEW120 SCT180 23/21 A2996 RMK AO2 SLP146 T02330211 VISNO N $</raw_text>
@@ -77069,31 +77047,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>METAR</metar_type>
       <elevation_m>357.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KLEX 120154Z 21005KT 10SM -RA FEW012 SCT060 OVC110 21/19 A2994 RMK AO2 RAE20B25 SLP131 P0017 T02060189</raw_text>
-      <station_id>KLEX</station_id>
-      <observation_time>2022-09-12T01:54:00Z</observation_time>
-      <latitude>38.03</latitude>
-      <longitude>-84.6</longitude>
-      <temp_c>20.6</temp_c>
-      <dewpoint_c>18.9</dewpoint_c>
-      <wind_dir_degrees>210</wind_dir_degrees>
-      <wind_speed_kt>5</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>29.940945</altim_in_hg>
-      <sea_level_pressure_mb>1013.1</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <wx_string>-RA</wx_string>
-      <sky_condition sky_cover="FEW" cloud_base_ft_agl="1200" />
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="6000" />
-      <sky_condition sky_cover="OVC" cloud_base_ft_agl="11000" />
-      <flight_category>VFR</flight_category>
-      <precip_in>0.17</precip_in>
-      <metar_type>METAR</metar_type>
-      <elevation_m>294.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KLAF 120154Z AUTO 28009G17KT 10SM OVC016 17/13 A2993 RMK AO2 SLP133 T01670133 $</raw_text>
@@ -90400,30 +90353,6 @@
       <flight_category>VFR</flight_category>
       <metar_type>METAR</metar_type>
       <elevation_m>786.0</elevation_m>
-    </METAR>
-    <METAR>
-      <raw_text>KDCA 120152Z 19006KT 10SM SCT010 BKN034 BKN060 BKN250 24/22 A2996 RMK AO2 SLP144 T02390222</raw_text>
-      <station_id>KDCA</station_id>
-      <observation_time>2022-09-12T01:52:00Z</observation_time>
-      <latitude>38.85</latitude>
-      <longitude>-77.03</longitude>
-      <temp_c>23.9</temp_c>
-      <dewpoint_c>22.2</dewpoint_c>
-      <wind_dir_degrees>190</wind_dir_degrees>
-      <wind_speed_kt>6</wind_speed_kt>
-      <visibility_statute_mi>10.0</visibility_statute_mi>
-      <altim_in_hg>29.958662</altim_in_hg>
-      <sea_level_pressure_mb>1014.4</sea_level_pressure_mb>
-      <quality_control_flags>
-        <auto_station>TRUE</auto_station>
-      </quality_control_flags>
-      <sky_condition sky_cover="SCT" cloud_base_ft_agl="1000" />
-      <sky_condition sky_cover="BKN" cloud_base_ft_agl="3400" />
-      <sky_condition sky_cover="BKN" cloud_base_ft_agl="6000" />
-      <sky_condition sky_cover="BKN" cloud_base_ft_agl="25000" />
-      <flight_category>VFR</flight_category>
-      <metar_type>METAR</metar_type>
-      <elevation_m>4.0</elevation_m>
     </METAR>
     <METAR>
       <raw_text>KCVG 120152Z 25006KT 10SM FEW019 BKN120 OVC230 21/19 A2992 RMK AO2 SLP123 T02060189 $</raw_text>
