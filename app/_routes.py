@@ -68,7 +68,7 @@ def get_metars():
     x = metars.content
     
 scheduler = BackgroundScheduler()
-scheduler.add_job(func=get_metars, trigger="interval", seconds=60)
+scheduler.add_job(func=get_metars, trigger="interval", seconds=300)
 scheduler.start()
 
 # Shut down the scheduler when exiting the app
