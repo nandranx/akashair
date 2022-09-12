@@ -48,3 +48,5 @@ Werkzeug==2.2.2
 WTForms==3.0.1
 yarg==0.1.9
 zipp==3.8.1
+gunicorn
+psycopg2-binary
