@@ -62,11 +62,13 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
+x = "." 
 
 def get_metars():
     metars = requests.get("https://aviationweather-cprk.ncep.noaa.gov/adds/dataserver_current/current/metars.cache.xml")
     open('now.xml', 'wb').write(metars.content)
-
+    x = metars.content
+    
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=get_metars, trigger="interval", seconds=60)
 scheduler.start()
@@ -156,8 +158,7 @@ def routine_entry():
     return render_template('routine_entry/index.html', title='Available Routines', routines=routines)
 
 
-metars = open('now.xml', 'r').read()
-soup = BeautifulSoup(metars, 'lxml')
+
 
 @app.route('/akashair/<string:icao_code>', methods = ['GET','POST'])
 @login_required
@@ -168,12 +169,15 @@ def akashair_home(icao_code='KSFO'):
 
     icao_codes = re.split(' |,|\*|\n|  ',icao_code)
     metar = []
+
+    soup = BeautifulSoup(open('now.xml', 'r').read(), 'lxml')
+
     for i in range(0,len(icao_codes)):
         try:
             metar_entry = { "icao_code" : icao_codes[i], "metar_raw_text" : soup.find("station_id",text=icao_codes[i]).find_parent().raw_text.text,"observation_time" : soup.find("station_id",text=icao_codes[i]).find_parent().observation_time.text }
             metar.append(json.loads(json.dumps(metar_entry)))
         except:
-            metar_entry = { "icao_code" : icao_codes[i], "metar_raw_text" : "No such Airport found" }
+            metar_entry = { "icao_code" : icao_codes[i], "metar_raw_text" : soup }
             metar.append(json.loads(json.dumps(metar_entry)))
     
     return render_template('akashair/index.html', title='Available Routines', metar = metar, form = form)
