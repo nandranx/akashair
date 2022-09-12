@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+
+<div class="col-sm-12">
+
+    <br/>
+    <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6">
+            <table class = "table">
+                <form action="" method="post">
+                    <div class="form-outline">
+                        <div class="form-group">
+                            {% for input in form %}
+                            {% if input.type == "StringField" or input.type == "PasswordField" %}
+                            
+                                {{ input.label(class="form-label") }}
+                                    {% for error in input.errors %}
+                                    <span class="form-label" style="color: red;">({{ error }}) </span>
+                                    {% endfor %}
+                                {{ input(size=32, class="form-control") }}<br/>
+                                
+                            {% else %}
+                                {{ input(class="btn btn-primary") }}
+                            {% endif %}
+                
+                        {% endfor %}
+                        </div>
+                    </div>
+                </form>
+                <thead>
+                    <tr>
+                        <th scope="col">ICAO_CODE</th>
+                        <th scope="col">OBSERVATION_TIME</th>
+                        <th scope="col">METAR RAW_TEXT</th>
+                    </tr>
+                </thead>
+                
+                {% for each_item in metar %}
+                    <tr>
+                        <td class="table-light">
+                            {{ each_item['icao_code'] }}    
+                        </td>
+
+                        <td>
+                            {{ each_item['observation_time'] }}     
+                        </td>
+                        <td>
+                            {{ each_item['metar_raw_text'] }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</div>
+{% endblock %}

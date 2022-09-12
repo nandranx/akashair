@@ -65,29 +65,11 @@ def my_view(info, unique_id):
         info.append("error : " + "No such form exists. Please select the right form from url")
         return F(), info
 
-def add_routine_screen(unique_id, info):
+def add_routine_screen(info):
     array = [
-        { 
-        "name" : "version",
-        "label" : "version",
-        "type" : "Integer",
-        "validators" : ""
-        },
-        { 
-        "name" : "is_primary",
-        "label" : "is_primary",
-        "type" : "Boolean",
-        "validators" : ""
-        },
         { 
         "name" : "name",
         "label" : "name",
-        "type" : "String",
-        "validators" : ""
-        },
-        { 
-        "name" : "label",
-        "label" : "label",
         "type" : "String",
         "validators" : ""
         },
@@ -102,47 +84,16 @@ def add_routine_screen(unique_id, info):
         "label" : "fields",
         "type" : "String",
         "validators" : ""
-        },
-        { 
-        "name" : "reader",
-        "label" : "reader",
-        "type" : "Integer",
-        "validators" : ""
-        },
-        { 
-        "name" : "editor",
-        "label" : "editor",
-        "type" : "Integer",
-        "validators" : ""
-        },
-        { 
-        "name" : "entry_reader",
-        "label" : "entry_reader",
-        "type" : "Integer",
-        "validators" : ""
-        },
-        { 
-        "name" : "entry_editor",
-        "label" : "entry_editor",
-        "type" : "Integer",
-        "validators" : ""
         }]
 
     rs = RoutineScreen()
-    rs.version_ = '1'
-    rs.is_primary = True
-
-    rs.reader = '1'
-    rs.editor = '1'
-    rs.entry_reader = '1'
-    rs.entry_editor = '1'
     
-    rs.name = 'RoutineScreen_form_name_{}'.format(unique_id)
-    rs.label = 'label_{}'.format(unique_id)
-    rs.description = 'description_{}'.format(unique_id)
+    rs.name = 'RoutineScreen_{}'.format("bootstrap")
+    rs.description = 'description_{}'.format("bootstrap")
     rs.fields = json.dumps(array,indent=4)
 
     try:
+        #db.session.rollback()
         db.session.add(rs)
         db.session.commit()
     except Exception as error:

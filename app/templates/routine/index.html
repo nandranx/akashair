@@ -28,6 +28,12 @@
                         <td>
                             {{ each_item['description'] }}
                         </td>
+                        <td>    
+                            <form method="post">
+                                <input name="id_tbd" type="hidden" value= "{{ each_item['id'] }}" >
+                                <input class="btn btn-secondary" id="{{ each_item['id'] }}" name="delete" type="submit" value= "Delete" >
+                            </form>                        
+                        </td>
                     </tr>
                     {% endfor %}
                 </table>

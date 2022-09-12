@@ -31,7 +31,7 @@ class User(UserMixin, db.Model):
         return check_password_hash(self.password_hash, password)    
 
 class RoutineScreen(db.Model):
-    id = db.Column(db.Integer, primary_key=True, default = uuid.uuid4)
+    id = db.Column(db.Text, primary_key=True, default = str(uuid.uuid4()))
 
     name = db.Column(db.String(30))
     description = db.Column(db.String(150))
@@ -44,7 +44,7 @@ class RoutineScreen(db.Model):
         return '<RoutineScreen {}>'.format(self.name)
 
 class RoutineEntry(db.Model):
-    id = db.Column(db.Integer, primary_key=True, default = uuid.uuid4)    
+    id = db.Column(db.Text, primary_key=True, default = str(uuid.uuid4()))    
     routine_form_id = db.Column(db.Integer)
 
     field_values = db.Column(db.Text)
