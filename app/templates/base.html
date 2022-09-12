@@ -18,8 +18,11 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('index') }}">Home</a></li>
-                    <li><a href="{{ url_for('app_home',icao_code='KSFO') }}">App</a></li>
+                    <li><a href="{{ url_for('register') }}">Register</a></li>
+                    <li><a href="{{ url_for('app_home',icao_code='KSFO') }}">View AKASHAIR</a></li>
+                    <li> </li>
+                    <li> </li>
+                    <li> </li>
                     <li>
                         {% if current_user.is_anonymous %}
                         <a href="{{ url_for('login') }}">Login</a>
