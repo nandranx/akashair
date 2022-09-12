@@ -156,7 +156,7 @@ def routine_entry():
     return render_template('routine_entry/index.html', title='Available Routines', routines=routines)
 
 
-metars = open(''C:\\Users\\NandR\\OneDrive\\Desktop\\Apps\\nila\\now.xml', 'r').read()
+metars = open('C:\\Users\\NandR\\OneDrive\\Desktop\\Apps\\nila\\now.xml', 'r').read()
 soup = BeautifulSoup(metars, 'lxml')
 
 @app.route('/akashair/<string:icao_code>', methods = ['GET','POST'])
