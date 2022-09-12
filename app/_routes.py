@@ -8,11 +8,9 @@ import json
 import random
 import uuid
 
-from app.akashair import AkashairForm
+from app.apppy import appForm
 from app.login import LoginForm
-from app.routine import RoutineForm, RoutineScreenField, my_view, add_routine_screen
-from app.connect import ConnectForm, create_link_token
-from app.models import User, RoutineScreen, RoutineEntry
+from app.models import User
 from app.register import RegistrationForm
 
 from flask import render_template, flash, redirect, url_for, send_from_directory
@@ -53,7 +51,7 @@ def login():
         login_user(user)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('routine_home')
+            next_page = url_for('app_home',icao_code='KSFO')
         return redirect(next_page)
     return render_template('login.html', title='Sign In', form=form)
 
@@ -90,82 +88,12 @@ def register():
         return redirect(url_for('login'))
     return render_template('register.html', title='Register', form=form)
 
-@app.route('/connect', methods = ['GET','POST'])
-def connect() :
-    form = ConnectForm()
-    if form.validate_on_submit():
-        return redirect(url_for('connect'))
-    return render_template('connect.html', title='Home',form=form, link_token=create_link_token())
-
-@app.route('/routine/<unique_id>/', methods = ['GET','POST'])
-@login_required
-def routine(unique_id):
-    info = []
-
-    form, info = my_view(info, unique_id)
-    FieldEntries = []
-    FieldEntry = {}
-        
-    if form.validate_on_submit():
-        re = RoutineEntry()
-        re.version_ = '1'
-        re.routine_form_id = unique_id
-        re.routine_form_verion = '1'
-        re.field_values = form.fields.data
-
-        try:
-            db.session.add(re)
-            db.session.commit()
-        except Exception as error:
-            info.append(error)
-
-        return redirect(url_for('routine', unique_id=unique_id )), info
-
-    return render_template('routine_entry/creator.html', title='Routine',form=form, unique_id=unique_id, info=info)        
-
-@app.route('/routine/', methods = ['GET','POST'])
-@login_required
-def routine_redirect():
-    return redirect(url_for('routine_home'))
-
-@app.route('/routine/home/', methods = ['GET','POST'])
-@login_required
-def routine_home():
-    if request.method == 'POST':
-        tbd = RoutineScreen.query.get(request.form['id_tbd'])
-        db.session.delete(tbd) 
-        db.session.commit()
-
-    routines = [] #Create an empty array to store all available routine screens to be passed onto the UI
-    rs_filtered = RoutineScreen.query.all() #Get all routine screens that have been created to far
-    for i in range(0,len(rs_filtered)): #Create a json that contains the above information so the UI can format it as needed.
-        avbl_routine = ""
-        avbl_routine = {"name" : str(rs_filtered[i].name),"id" : str(rs_filtered[i].id),"description" : str(rs_filtered[i].description) }
-        routines.append(json.loads(json.dumps(avbl_routine)))
-
-    return render_template('routine/index.html', title='Available Routines', routines=routines)
-        
-@app.route('/routine/<int:unique_id>/view', methods = ['GET','POST'])
-@login_required
-def routine_entry():
-    routines = []
-    rs_filtered = RoutineScreen.query.all() 
-    for i in range(0,len(rs_filtered)):
-        avbl_routine = ""
-        avbl_routine = {"name" : str(rs_filtered[i].name),"id" : str(rs_filtered[i].id),"description" : str(rs_filtered[i].description) }
-        routines.append(json.loads(json.dumps(avbl_routine)))
-
-    return render_template('routine_entry/index.html', title='Available Routines', routines=routines)
-
-
-
-
 @app.route('/akashair/<string:icao_code>', methods = ['GET','POST'])
 @login_required
-def akashair_home(icao_code='KSFO'):
-    form = AkashairForm()
+def app_home(icao_code='KSFO'):
+    form = appForm()
     if form.validate_on_submit():
-        return redirect(url_for('akashair_home', icao_code=request.form.get("icao_codes") ))
+        return redirect(url_for('app_home', icao_code=request.form.get("icao_codes") ))
 
     icao_codes = re.split(' |,|\*|\n|  ',icao_code)
     metar = []
@@ -177,10 +105,10 @@ def akashair_home(icao_code='KSFO'):
             metar_entry = { "icao_code" : icao_codes[i], "metar_raw_text" : soup.find("station_id",text=icao_codes[i]).find_parent().raw_text.text,"observation_time" : soup.find("station_id",text=icao_codes[i]).find_parent().observation_time.text }
             metar.append(json.loads(json.dumps(metar_entry)))
         except:
-            metar_entry = { "icao_code" : icao_codes[i], "metar_raw_text" : soup }
+            metar_entry = { "icao_code" : icao_codes[i], "metar_raw_text" : "No such airport found" }
             metar.append(json.loads(json.dumps(metar_entry)))
     
-    return render_template('akashair/index.html', title='Available Routines', metar = metar, form = form)
+    return render_template('app_templates/index.html', title='Available Routines', metar = metar, form = form)
 
 
 

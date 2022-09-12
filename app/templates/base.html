@@ -1,7 +1,7 @@
 {% extends 'bootstrap/base.html' %}
 
 {% block title %}
-    {% if title %}{{ title }} - Nila{% else %}Welcome to Nila{% endif %}
+    {% if title %}{{ title }} - App{% else %}App{% endif %}
 {% endblock %}
 
 {% block navbar %}
@@ -18,12 +18,8 @@
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('login') }}">login</a></li>
-                    <li><a href="{{ url_for('connect') }}">connect</a></li>
-                    <li><a href="{{ url_for('routine_home') }}">routines</a></li>
-                    <li><a href="{{ url_for('akashair_home',icao_code='SFO') }}">akashair</a></li>
-                </ul>
-                <ul class="nav navbar-nav">
+                    <li><a href="{{ url_for('index') }}">Home</a></li>
+                    <li><a href="{{ url_for('app_home',icao_code='KSFO') }}">App</a></li>
                     <li>
                         {% if current_user.is_anonymous %}
                         <a href="{{ url_for('login') }}">Login</a>

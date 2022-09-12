@@ -29,30 +29,3 @@ class User(UserMixin, db.Model):
 
     def check_password(self, password):
         return check_password_hash(self.password_hash, password)    
-
-class RoutineScreen(db.Model):
-    id = db.Column(db.Text, primary_key=True, default = str(uuid.uuid4()))
-
-    name = db.Column(db.String(30))
-    description = db.Column(db.String(150))
-    fields =  db.Column(db.Text)
-
-    created_at = db.Column(db.DateTime,default=datetime.utcnow)
-    last_updated = db.Column(db.DateTime, default=datetime.utcnow)
-
-    def __repr__(self):
-        return '<RoutineScreen {}>'.format(self.name)
-
-class RoutineEntry(db.Model):
-    id = db.Column(db.Text, primary_key=True, default = str(uuid.uuid4()))    
-    routine_form_id = db.Column(db.Integer)
-
-    field_values = db.Column(db.Text)
-    
-    created_at = db.Column(db.DateTime,default=datetime.utcnow)
-    last_updated = db.Column(db.DateTime, default=datetime.utcnow)
-    #last_updated_by = db.Column(db.Integer,db.ForeignKey('user.id'),default=1)
-    #deleted_at = db.Column(db.DateTime)
-
-    def __repr__(self):
-        return '<RoutineEntry {}>'.format(self.field_values)
