@@ -7,8 +7,8 @@ from app import db
 import json
 import random
 import uuid
-from app.akashair import AkashairForm
 
+from app.akashair import AkashairForm
 from app.login import LoginForm
 from app.routine import RoutineForm, RoutineScreenField, my_view, add_routine_screen
 from app.connect import ConnectForm, create_link_token
@@ -65,7 +65,7 @@ def logout():
 
 def get_metars():
     metars = requests.get("https://aviationweather-cprk.ncep.noaa.gov/adds/dataserver_current/current/metars.cache.xml")
-    open('C:\\Users\\NandR\\OneDrive\\Desktop\\Apps\\nila\\now.xml', 'wb').write(metars.content)
+    open('now.xml', 'wb').write(metars.content)
 
 scheduler = BackgroundScheduler()
 scheduler.add_job(func=get_metars, trigger="interval", seconds=60)
@@ -156,7 +156,7 @@ def routine_entry():
     return render_template('routine_entry/index.html', title='Available Routines', routines=routines)
 
 
-metars = open('C:\\Users\\NandR\\OneDrive\\Desktop\\Apps\\nila\\now.xml', 'r').read()
+metars = open('now.xml', 'r').read()
 soup = BeautifulSoup(metars, 'lxml')
 
 @app.route('/akashair/<string:icao_code>', methods = ['GET','POST'])
