@@ -20,16 +20,19 @@
                 <ul class="nav navbar-nav">
                     <li><a href="{{ url_for('register') }}">Register</a></li>
                     <li><a href="{{ url_for('app_home',icao_code='KSFO') }}">AkashAir</a></li>
-                    <li> </li>
-                    <li> </li>
-                    <li> </li>
                     <li>
                         {% if current_user.is_anonymous %}
                         <a href="{{ url_for('login') }}">Login</a>
                         {% else %}
                         <a href="{{ url_for('logout') }}">Logout</a>
                         {% endif %}
+                    
+                    {% if current_user.admin == True %}
+                    <li>    
+                        <a href="{{ url_for('admin') }}">ADMIN</a>
                     </li>
+                    {% endif %}
+                    
                 </ul>
             </div>
         </div>

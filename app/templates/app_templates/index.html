@@ -8,6 +8,7 @@
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
+            {{ times }}
             <table class = "table">
                 <form action="" method="post">
                     <div class="form-outline">
@@ -37,7 +38,7 @@
                     </tr>
                 </thead>
                 
-                {% for each_item in metar %}
+                {% for each_item in metar_data %}
                     <tr>
                         <td class="table-light">
                             {{ each_item['icao_code'] }}    
